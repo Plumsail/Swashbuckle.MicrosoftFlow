@@ -1,7 +1,7 @@
 Introduction
 ============
 
-This package was ported to netstandard and 6.x version of swagger from [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore).
+This package was ported to NET5 and 6.x version of the swagger from [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore).
 
 Usage
 =====
