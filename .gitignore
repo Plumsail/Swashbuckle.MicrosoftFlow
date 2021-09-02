@@ -1,0 +1,6 @@
+.idea/
+obj/
+bin/
+packages
+.vs/
+*.swp
