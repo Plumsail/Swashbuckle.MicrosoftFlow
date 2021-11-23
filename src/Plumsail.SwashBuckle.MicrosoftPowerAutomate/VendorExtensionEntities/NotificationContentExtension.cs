@@ -3,7 +3,7 @@ using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 using Microsoft.OpenApi.Writers;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities
 {
     internal class NotificationContentExtension : IOpenApiExtension
     {

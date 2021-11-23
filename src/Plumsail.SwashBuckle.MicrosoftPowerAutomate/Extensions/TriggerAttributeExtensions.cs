@@ -1,14 +1,14 @@
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Helpers;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     internal static class TriggerAttributeExtensions
     {

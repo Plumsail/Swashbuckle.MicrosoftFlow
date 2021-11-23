@@ -8,7 +8,7 @@ Usage
 
 ## Nuget package
 ```
-Install-Package Plumsail.SwashBuckle.MicrosoftPowerAutomate
+Install-Package Plumsail.Swashbuckle.MicrosoftPowerAutomate
 ```
 
 ## Metadata

@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using System.Collections.Generic;
 using TestApi.Models;
 

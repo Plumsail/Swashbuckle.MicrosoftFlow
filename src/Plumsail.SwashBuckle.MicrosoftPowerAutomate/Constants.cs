@@ -1,4 +1,4 @@
-﻿namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate
+﻿namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate
 {
     public static class Constants
     {

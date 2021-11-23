@@ -5,9 +5,9 @@ VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApi", "TestApi\TestApi.csproj", "{83942D83-2BA1-4490-BF5D-7356CD370B99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumsail.SwashBuckle.MicrosoftPowerAutomate", "Plumsail.SwashBuckle.MicrosoftPowerAutomate\Plumsail.SwashBuckle.MicrosoftPowerAutomate.csproj", "{60D79569-D240-4372-BD97-4CF984AC43B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumsail.Swashbuckle.MicrosoftPowerAutomate", "Plumsail.Swashbuckle.MicrosoftPowerAutomate\Plumsail.Swashbuckle.MicrosoftPowerAutomate.csproj", "{60D79569-D240-4372-BD97-4CF984AC43B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumsail.Swashbuckle.MicrosoftPowerAutomate.Tests", "Plumsail.SwashBuckle.MicrosoftPowerAutomate.Tests\Plumsail.Swashbuckle.MicrosoftPowerAutomate.Tests.csproj", "{7451BF97-503F-4FC9-BDE8-976912F52838}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Plumsail.Swashbuckle.MicrosoftPowerAutomate.Tests", "Plumsail.Swashbuckle.MicrosoftPowerAutomate.Tests\Plumsail.Swashbuckle.MicrosoftPowerAutomate.Tests.csproj", "{7451BF97-503F-4FC9-BDE8-976912F52838}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

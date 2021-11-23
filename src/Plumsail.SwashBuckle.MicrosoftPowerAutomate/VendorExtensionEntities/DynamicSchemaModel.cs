@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities
 {
     public class DynamicSchemaModel
     {

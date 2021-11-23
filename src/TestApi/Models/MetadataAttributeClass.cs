@@ -1,4 +1,4 @@
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using System.Text.Json.Serialization;
 
 namespace TestApi.Models

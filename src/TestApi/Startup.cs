@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using System.Collections.Generic;
 
 namespace TestApi

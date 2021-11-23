@@ -1,10 +1,9 @@
-﻿using System.Collections.Generic;
-using Microsoft.OpenApi.Any;
+﻿using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Interfaces;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     internal static class MetadataAttributeExtensions
     {

@@ -1,9 +1,9 @@
 ﻿using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Filters
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
     public class CapabilityFilter : IDocumentFilter
     {

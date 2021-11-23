@@ -1,11 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+﻿using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Interfaces;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class ApiDescriptionExtensions
     {

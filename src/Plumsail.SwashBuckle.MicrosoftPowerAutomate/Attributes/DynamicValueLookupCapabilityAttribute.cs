@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes
 {
     /// <summary>
     /// Extends swagger definition with vendor extension: x-ms-dynamic-values

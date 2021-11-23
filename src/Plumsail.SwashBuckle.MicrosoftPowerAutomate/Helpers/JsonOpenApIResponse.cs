@@ -1,7 +1,7 @@
-using System.Collections.Generic;
 using Microsoft.OpenApi.Models;
+using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Helpers
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers
 {
     public static class JsonOpenApiResponseFactory
     {

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.OpenApi.Interfaces;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Microsoft.OpenApi.Interfaces;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class CustomAttributeProviderExtensions
     {

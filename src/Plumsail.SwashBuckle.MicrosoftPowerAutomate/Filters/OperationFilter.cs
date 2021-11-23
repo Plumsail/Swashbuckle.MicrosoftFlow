@@ -1,10 +1,10 @@
 ﻿using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Filters
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
     public class OperationFilter : IOperationFilter
     {

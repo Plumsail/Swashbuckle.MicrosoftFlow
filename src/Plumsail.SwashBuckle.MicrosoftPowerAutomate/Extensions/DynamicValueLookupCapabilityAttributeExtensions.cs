@@ -1,10 +1,10 @@
 ﻿using Microsoft.OpenApi.Interfaces;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Helpers;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     internal static class DynamicValueLookupCapabilityAttributeExtensions
     {

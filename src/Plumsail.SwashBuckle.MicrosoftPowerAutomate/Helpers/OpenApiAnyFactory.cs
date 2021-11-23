@@ -1,13 +1,15 @@
 ﻿using Microsoft.OpenApi.Any;
 using System.Text.Json;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Helpers
+using SwaggerGen = Swashbuckle.AspNetCore.SwaggerGen;
+
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers
 {
     public static class OpenApiAnyFactory
     {
         public static IOpenApiAny ForValue(object value)
         {
-            return Swashbuckle.AspNetCore.SwaggerGen.OpenApiAnyFactory.CreateFromJson(
+            return SwaggerGen.OpenApiAnyFactory.CreateFromJson(
                 JsonSerializer.Serialize(value));
         }
     }

@@ -1,4 +1,4 @@
-﻿using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+﻿using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using System.Collections.Generic;
 
 namespace TestApi.Models

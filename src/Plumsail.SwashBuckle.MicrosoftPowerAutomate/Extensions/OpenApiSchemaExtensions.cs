@@ -6,7 +6,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text.Json.Serialization;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class OpenApiSchemaExtensions
     {

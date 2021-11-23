@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using Microsoft.AspNetCore.Mvc.Abstractions;
+﻿using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.OpenApi.Models;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class OpenApiOperationExtensions
     {

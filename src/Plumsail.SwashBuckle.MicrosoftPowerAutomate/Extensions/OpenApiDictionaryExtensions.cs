@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc.Abstractions;
+﻿using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Controllers;
 using Microsoft.OpenApi.Interfaces;
+using System.Collections.Generic;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class OpenApiDictionaryExtensions
     {

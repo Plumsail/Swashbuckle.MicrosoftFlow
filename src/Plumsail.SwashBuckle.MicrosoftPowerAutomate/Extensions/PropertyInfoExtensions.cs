@@ -1,10 +1,10 @@
 ﻿using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     public static class PropertyInfoExtensions
     {

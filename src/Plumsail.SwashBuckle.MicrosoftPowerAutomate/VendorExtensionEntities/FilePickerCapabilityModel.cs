@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities
 {
     /// <summary>
     /// Used to create swagger definition with vendor extension: x-ms-capabilities

@@ -1,4 +1,4 @@
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes
 {
     /// <summary>
     /// Visibility options for flow/logic app designer

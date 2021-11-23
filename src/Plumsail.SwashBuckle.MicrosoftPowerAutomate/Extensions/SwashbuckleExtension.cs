@@ -1,13 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Filters;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Linq;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 {
     /// <summary>
     /// Swagger generation opetions extensions

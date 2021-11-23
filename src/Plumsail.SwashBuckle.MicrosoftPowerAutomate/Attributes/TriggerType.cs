@@ -1,4 +1,4 @@
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes
 {
     /// <summary>
     /// Type of trigger that the operation represents. Specifies whether or not the operation

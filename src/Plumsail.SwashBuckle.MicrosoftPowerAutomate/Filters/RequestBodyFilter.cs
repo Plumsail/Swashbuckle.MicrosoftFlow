@@ -1,9 +1,9 @@
 using Microsoft.OpenApi.Any;
 using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Filters
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
     public sealed class RequestBodyFilter : IRequestBodyFilter
     {

@@ -1,8 +1,7 @@
 ﻿using Microsoft.OpenApi.Models;
-using Plumsail.SwashBuckle.MicrosoftPowerAutomate;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Filters
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
     public class DocumentFilter : IDocumentFilter
     {

@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.AspNetCore.WebUtilities;
+using Microsoft.Extensions.Primitives;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using Microsoft.AspNetCore.WebUtilities;
-using Microsoft.Extensions.Primitives;
 
-namespace Plumsail.SwashBuckle.MicrosoftPowerAutomate.Helpers
+namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers
 {
     internal class ParameterParser
     {
