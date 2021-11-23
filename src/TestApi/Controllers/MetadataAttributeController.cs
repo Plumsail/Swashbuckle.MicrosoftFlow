@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
 using TestApi.Models;
 
 namespace TestApi.Controllers
@@ -13,7 +13,7 @@ namespace TestApi.Controllers
         {
             return null;
         }
-        
+
         [HttpPost]
         [Metadata(null, null, VisibilityType.Default)]
         [Route("/api/MetadataAttributeWithNullSummaryAndDescription")]

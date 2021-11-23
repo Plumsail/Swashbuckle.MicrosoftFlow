@@ -1,5 +1,5 @@
-﻿using System.Collections.Generic;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+﻿using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using System.Collections.Generic;
 
 namespace TestApi.Models
 {

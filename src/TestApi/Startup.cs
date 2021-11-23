@@ -1,11 +1,9 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Swashbuckle.AspNetCore.Swagger;
-using SwashBuckle.MicrosoftExtensions.Extensions;
-using SwashBuckle.MicrosoftExtensions.VendorExtensionEntities;
+using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Extensions;
+using Plumsail.SwashBuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
+using System.Collections.Generic;
 
 namespace TestApi
 {
@@ -23,18 +21,18 @@ namespace TestApi
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
                 c.GenerateMicrosoftExtensions(FilePicker);
             });
+            //services.AddSwaggerGenNewtonsoftSupport();
         }
 
         private FilePickerCapabilityModel FilePicker =>
-            new FilePickerCapabilityModel
-            (
+            new(
                 new FilePickerOperationModel("InitialOperation", null),
-                new FilePickerOperationModel("BrowsingOperation", new Dictionary<string, string> {{"Id", "Id"}}),
+                new FilePickerOperationModel("BrowsingOperation", new Dictionary<string, string> { { "Id", "Id" } }),
                 "Name",
                 "IsFolder",
                 "MediaType"
             );
-        
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app)

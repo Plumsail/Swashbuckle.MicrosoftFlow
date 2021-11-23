@@ -8,7 +8,7 @@ Usage
 
 ## Nuget package
 ```
-Install-Package Swashbuckle.AspNetCore.MicrosoftExtensions
+Install-Package Plumsail.SwashBuckle.MicrosoftPowerAutomate
 ```
 
 ## Metadata

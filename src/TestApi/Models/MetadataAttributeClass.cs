@@ -1,11 +1,12 @@
-using Newtonsoft.Json;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+using Plumsail.SwashBuckle.MicrosoftPowerAutomate.Attributes;
+using System.Text.Json.Serialization;
 
 namespace TestApi.Models
 {
     public class MetadataAttributeClass
     {
-        [JsonProperty("customName")]
+        //[JsonProperty("customName")]
+        [JsonPropertyName("customName")]
         [Metadata("Friendly", "Description", VisibilityType.Advanced)]
         public string Name { get; }
 
