@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Plumsail.SwashBuckle.MicrosoftFlow\Plumsail.SwashBuckle.MicrosoftPowerAutomate.csproj" />
+    <ProjectReference Include="..\Plumsail.SwashBuckle.MicrosoftPowerAutomate\Plumsail.SwashBuckle.MicrosoftPowerAutomate.csproj" />
   </ItemGroup>
 
 </Project>
