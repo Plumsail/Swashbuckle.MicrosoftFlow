@@ -5,7 +5,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
-    public sealed class RequestBodyFilter : IRequestBodyFilter
+    internal sealed class RequestBodyFilter : IRequestBodyFilter
     {
         /// <inheritdoc />
         public void Apply(OpenApiRequestBody requestBody, RequestBodyFilterContext context)

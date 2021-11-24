@@ -3,7 +3,7 @@ using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
-    public class DocumentFilter : IDocumentFilter
+    internal class DocumentFilter : IDocumentFilter
     {
         public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
         {

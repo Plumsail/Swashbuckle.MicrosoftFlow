@@ -8,8 +8,15 @@ using System.Reflection;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
-    internal class SchemaFilter : ISchemaFilter
+    public class SchemaFilter : ISchemaFilter
     {
+        private readonly ISerializerDataContractResolver _serializerDataContractResolver;
+
+        public SchemaFilter(ISerializerDataContractResolver serializerDataContractResolver)
+        {
+            _serializerDataContractResolver = serializerDataContractResolver;
+        }
+
         public void Apply(OpenApiSchema schema, SchemaFilterContext context)
         {
             if (schema is null || context is null)
@@ -19,7 +26,7 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 
             schema.Extensions.AddRange(GetClassExtensions(context));
 
-            schema.ExtendObjectProperties(context, Extensions.PropertyInfoExtensions.ExtendProperty);
+            schema.ExtendObjectProperties(context, Extensions.MemberInfoExtensions.ExtendProperty, _serializerDataContractResolver);
         }
 
         private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetClassExtensions(SchemaFilterContext context)

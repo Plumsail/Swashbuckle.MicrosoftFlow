@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
-    public class CapabilityFilter : IDocumentFilter
+    internal class CapabilityFilter : IDocumentFilter
     {
         private readonly FilePickerCapabilityModel m_filePickerCapability;
 

@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 {
-    public class OperationFilter : IOperationFilter
+    internal class OperationFilter : IOperationFilter
     {
         public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
