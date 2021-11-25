@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using TestApi.Models;
 
 namespace TestApi.Controllers

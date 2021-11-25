@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using TestApi.Models;
 
 namespace TestApi.Controllers
@@ -8,7 +8,7 @@ namespace TestApi.Controllers
     {
         [HttpGet]
         [Route("api/capability")]
-        public DynamicValueLookupCapabilityClass Get 
+        public DynamicValueLookupCapabilityClass Get
         (
             [DynamicValueLookupCapability("capabilityName", "id", "name", parameters: "isFolder=true&test=static&test2={dynamic}")]
             string dynamicValue

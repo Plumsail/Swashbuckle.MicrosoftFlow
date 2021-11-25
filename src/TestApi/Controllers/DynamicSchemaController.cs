@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
-using Microsoft.AspNetCore.Mvc;
-using SwashBuckle.MicrosoftExtensions.Attributes;
+﻿using Microsoft.AspNetCore.Mvc;
+using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
+using System.Collections.Generic;
 using TestApi.Models;
 
 namespace TestApi.Controllers

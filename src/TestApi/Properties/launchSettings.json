@@ -16,7 +16,9 @@
       }
     },
     "TestApi": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/swagger/v1/swagger.json"
     }
   }
 }

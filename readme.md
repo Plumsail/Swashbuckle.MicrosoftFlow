@@ -8,14 +8,27 @@ Usage
 
 ## Nuget package
 ```
-Install-Package Swashbuckle.AspNetCore.MicrosoftExtensions
+Install-Package Plumsail.Swashbuckle.MicrosoftPowerAutomate
 ```
+
+## Activate support
+
+Add this extension call to `SwaggerGenOptions`.
+
+```csharp
+services.AddSwaggerGen(c =>
+{
+    c.GenerateMicrosoftExtensions();
+});
+```
+
+It has optional argument `FilePickerCapabilityModel filePicker` for activate [File picker capability](#file-picker-capability)
 
 ## Metadata
 Metadata attribute can be used for methods, parameters and properties
 ### Example definition
 Code:
-```
+```csharp
 public class MetdataAttributeClass
 {
     [Metadata("Summary", "Description", VisibilityType.Advanced)]
@@ -29,7 +42,7 @@ public class MetdataAttributeClass
 ```
 
 Generated swagger:
-```
+```json
 "MetdataAttributeClass": {
     "type": "object",
     "properties": {
@@ -46,7 +59,7 @@ Generated swagger:
 
 ### Example controller
 Code:
-```
+```csharp
 [Route("api/MetadataAttribute")]
     public class MetadataAttributeController : Controller
     {
@@ -58,7 +71,7 @@ Code:
 ```
 
 Generated swagger:
-```
+```json
 "/api/MetadataAttribute": {
     "post": {
         "x-ms-visibility": "important",
@@ -72,7 +85,7 @@ Generated swagger:
 Dynamic value lookup can be used for properties and parameters
 ### Example
 Code:
-```
+```csharp
 public class DynamicValueController : Controller
 {
     [HttpGet]
@@ -85,7 +98,7 @@ public class DynamicValueController : Controller
 }
 ```
 Swagger:
-```
+```json
 "/api/dynamic": {
     "get": {
         "tags": [ "DynamicValue" ],
@@ -121,7 +134,7 @@ Swagger:
 Dynamic value lookup capability can be used for parameters
 ### Example
 Code:
-```
+```csharp
 public class DynamicValueCapabilityController : Controller
     {
         [HttpGet]
@@ -134,7 +147,7 @@ public class DynamicValueCapabilityController : Controller
     }
 ```
 Swagger:
-```
+```json
 "/api/capability": {
     "get": {
         "tags": [
@@ -177,12 +190,12 @@ Swagger:
 Dynamic schema lookup can be used for properties, parameters and classes
 ### Example
 Code: 
-```
+```csharp
 [DynamicSchemaLookup("DynamicSchemaOpId", "schema", "param1={test}&param2=test")]
 public class DynamicSchemaLookupClass : Dictionary<string, object> { }
 ```
 Swagger:
-```
+```json
 "DynamicSchemaLookupClass": {
     "type": "object",
     "properties": { },
@@ -207,7 +220,7 @@ Swagger:
 File picker capability can be used in GenerateMicrosoftExtensions method
 ### Examples
 Code:
-```
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc();
@@ -229,7 +242,7 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 Swagger:
-```
+```json
 "x-ms-capabilities": {
     "open": {
         "operation-id": "InitialOperation"
@@ -256,7 +269,7 @@ Code:
 parameters: "staticParam=true"
 ```
 Swagger:
-```
+```json
 "parameters": {
     "staticParameter": true
 }
@@ -266,7 +279,7 @@ Code:
 parameters: "dynamicParam={previuoslyDefinedParam}"
 ```
 Swagger:
-```
+```json
 "parameters": {
     "dynamicParam": {
         "parameter": "previouslyDefinedParam"
@@ -278,7 +291,7 @@ Code:
 parameters: "staticParam=true&dynamicParam={previouslyDefinedParam}&moreDynamic={example}"
 ```
 Swagger:
-```
+```json
 "parameters": {
     "staticParam": true,
     "dynamicParam": {
@@ -286,6 +299,40 @@ Swagger:
     },
     "moreDynamic": {
         "parameter": "example"
+    }
+}
+```
+
+
+## Trigger
+Trigger used for mark route as Trigger subscribe method for Power Automate
+### Examples
+Code:
+```csharp
+[Route("api/[controller]")]
+[ApiController]
+public class TriggerController : ControllerBase
+{
+    [HttpPost]
+    [Trigger(TriggerType.Subscription, typeof(TriggerAnswerModel), "TriggerFriendlyName")]
+    public IActionResult TriggerSubscription([FromBody] SubscriberCreateRequest subscriber)
+    {
+        // Register flow and generate SubscriberId and URL for unsubscribe
+        return Created(unsubscribeUrl, subscriberId);
+    }
+}
+```
+Swagger:
+```json
+"/api/Trigger": {
+    "post": {
+        "x-ms-trigger": "signle"
+    },
+    "x-ms-notification-content": {
+        "description": "TriggerFriendlyName",
+        "schema": {
+            "$ref": "#/definitions/TriggerAnswerModel"
+        }
     }
 }
 ```

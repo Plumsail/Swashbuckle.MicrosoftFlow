@@ -1,4 +1,4 @@
-﻿using SwashBuckle.MicrosoftExtensions.Attributes;
+﻿using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 
 namespace TestApi.Models
 {
