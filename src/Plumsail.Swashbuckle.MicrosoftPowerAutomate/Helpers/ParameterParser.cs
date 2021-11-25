@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers
 {
-    internal class ParameterParser
+    internal static class ParameterParser
     {
         internal static IDictionary<string, object> Parse(string s)
         {
@@ -27,15 +27,12 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Helpers
             }
 
             // parse true/false values as bools
-            switch (parameter.Value[0])
+            return parameter.Value[0] switch
             {
-                case "true":
-                    return new KeyValuePair<string, object>(parameter.Key, true);
-                case "false":
-                    return new KeyValuePair<string, object>(parameter.Key, false);
-                default:
-                    return new KeyValuePair<string, object>(parameter.Key, parameter.Value[0]);
-            }
+                "true" => new KeyValuePair<string, object>(parameter.Key, true),
+                "false" => new KeyValuePair<string, object>(parameter.Key, false),
+                _ => new KeyValuePair<string, object>(parameter.Key, parameter.Value[0]),
+            };
         }
     }
 }

@@ -59,7 +59,7 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
                 }
             };
 
-            if (operation.Responses.Keys.Contains(attribute.StatusCode.ToString()))
+            if (operation.Responses.ContainsKey(attribute.StatusCode.ToString()))
             {
                 operation.Responses[attribute.StatusCode.ToString()] = response;
             }

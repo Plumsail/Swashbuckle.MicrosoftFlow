@@ -18,27 +18,27 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
             propertyExtensions.AddRange(GetValueLookupCapabilityProperties(property));
         }
 
-        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetMetadataExtensions(MemberInfo MemberInfo)
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetMetadataExtensions(MemberInfo memberInfo)
         {
-            var attribute = MemberInfo.GetCustomAttribute<MetadataAttribute>(true);
+            var attribute = memberInfo.GetCustomAttribute<MetadataAttribute>(true);
             return attribute.GetSwaggerExtensions();
         }
 
-        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetValueLookupProperties(MemberInfo MemberInfo)
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetValueLookupProperties(MemberInfo memberInfo)
         {
-            var attribute = MemberInfo.GetCustomAttribute<DynamicValueLookupAttribute>(true);
+            var attribute = memberInfo.GetCustomAttribute<DynamicValueLookupAttribute>(true);
             return attribute.GetSwaggerExtensions();
         }
 
-        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetValueLookupCapabilityProperties(MemberInfo MemberInfo)
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetValueLookupCapabilityProperties(MemberInfo memberInfo)
         {
-            var attribute = MemberInfo.GetCustomAttribute<DynamicValueLookupCapabilityAttribute>(true);
+            var attribute = memberInfo.GetCustomAttribute<DynamicValueLookupCapabilityAttribute>(true);
             return attribute.GetSwaggerExtensions();
         }
 
-        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetSchemaLookupProperties(MemberInfo MemberInfo)
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetSchemaLookupProperties(MemberInfo memberInfo)
         {
-            var attribute = MemberInfo.GetCustomAttribute<DynamicSchemaLookupAttribute>(true);
+            var attribute = memberInfo.GetCustomAttribute<DynamicSchemaLookupAttribute>(true);
             return attribute.GetSwaggerExtensions();
         }
     }
