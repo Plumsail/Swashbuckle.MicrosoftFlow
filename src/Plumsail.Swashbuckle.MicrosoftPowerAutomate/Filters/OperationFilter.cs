@@ -2,6 +2,7 @@
 using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Attributes;
 using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions;
 using Swashbuckle.AspNetCore.SwaggerGen;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
@@ -17,6 +18,7 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
             operation.Parameters.ApplyMetadata(context.ApiDescription.ActionDescriptor.Parameters);
 
             ApplyTriggerBatchModeAndResponse(operation, context);
+            ApplyBinaryResponse(operation, context);
         }
 
         private static void ApplyTriggerBatchModeAndResponse(OpenApiOperation operation, OperationFilterContext context)
@@ -27,6 +29,44 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
 
             operation.Extensions.AddRange(triggerInfo.GetSwaggerOperationExtensions(context));
             operation.Responses.AddRange(triggerInfo.GetSwaggerOperationResponses(context));
+        }
+
+        private static void ApplyBinaryResponse(OpenApiOperation operation, OperationFilterContext context)
+        {
+            var attribute = context.ApiDescription.CustomAttributes()
+                .OfType<BinaryResponseAttribute>()
+                .FirstOrDefault();
+
+            if (attribute == null) { return; }
+
+            var responseSchema = new OpenApiSchema
+            {
+                Title = attribute.Summary,
+                Description = attribute.Description,
+                Format = "binary",
+                Type = "string",
+            };
+            var responseDescription = !string.IsNullOrEmpty(attribute.Description) ? attribute.Description : attribute.Summary;
+            var response = new OpenApiResponse
+            {
+                Description = responseDescription,
+                Content = new Dictionary<string, OpenApiMediaType>
+                {
+                    [attribute.ContentType] = new OpenApiMediaType
+                    {
+                        Schema = responseSchema
+                    }
+                }
+            };
+
+            if (operation.Responses.Keys.Contains(attribute.StatusCode.ToString()))
+            {
+                operation.Responses[attribute.StatusCode.ToString()] = response;
+            }
+            else
+            {
+                operation.Responses.Add(attribute.StatusCode.ToString(), response);
+            }
         }
     }
 }
