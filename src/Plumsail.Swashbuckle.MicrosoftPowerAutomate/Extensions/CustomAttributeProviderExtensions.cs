@@ -16,6 +16,7 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
             extensions.AddRange(attributeProvider.GetValueLookupCapabilityProperties());
             extensions.AddRange(attributeProvider.GetMetadataProperties());
             extensions.AddRange(attributeProvider.GetSchemaLookupProperties());
+            extensions.AddRange(attributeProvider.GetPropertiesLookupProperties());
 
             return extensions;
         }
@@ -41,6 +42,12 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
         public static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetSchemaLookupProperties(this ICustomAttributeProvider attributeProvider)
         {
             var attribute = attributeProvider.GetCustomAttributes(typeof(DynamicSchemaLookupAttribute), true).SingleOrDefault() as DynamicSchemaLookupAttribute;
+            return attribute.GetSwaggerExtensions();
+        }
+
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetPropertiesLookupProperties(this ICustomAttributeProvider attributeProvider)
+        {
+            var attribute = attributeProvider.GetCustomAttributes(typeof(DynamicPropertiesLookupAttribute), true).SingleOrDefault() as DynamicPropertiesLookupAttribute;
             return attribute.GetSwaggerExtensions();
         }
     }

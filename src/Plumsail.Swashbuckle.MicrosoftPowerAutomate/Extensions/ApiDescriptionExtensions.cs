@@ -13,8 +13,11 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
         {
             var metadataAttribute = apiDescription.CustomAttributes().OfType<MetadataAttribute>().SingleOrDefault();
             var dynamicSchemaAttribute = apiDescription.CustomAttributes().OfType<DynamicSchemaLookupAttribute>().SingleOrDefault();
-            var extensions = metadataAttribute.GetSwaggerOperationExtensions();
-            return extensions.Concat(dynamicSchemaAttribute.GetSwaggerExtensions());
+            var dynaminPropertiesAttribute = apiDescription.CustomAttributes().OfType<DynamicPropertiesLookupAttribute>().SingleOrDefault();
+
+            return metadataAttribute.GetSwaggerOperationExtensions()
+                .Concat(dynamicSchemaAttribute.GetSwaggerExtensions())
+                .Concat(dynaminPropertiesAttribute.GetSwaggerExtensions());
         }
     }
 }
