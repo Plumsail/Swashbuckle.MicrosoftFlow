@@ -16,6 +16,8 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
             propertyExtensions.AddRange(GetValueLookupProperties(property));
             propertyExtensions.AddRange(GetSchemaLookupProperties(property));
             propertyExtensions.AddRange(GetValueLookupCapabilityProperties(property));
+            propertyExtensions.AddRange(GetPropertiesLookupProperties(property));
+            propertyExtensions.AddRange(GetCallbackUrlProperties(property));
         }
 
         private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetMetadataExtensions(MemberInfo memberInfo)
@@ -39,6 +41,18 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
         private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetSchemaLookupProperties(MemberInfo memberInfo)
         {
             var attribute = memberInfo.GetCustomAttribute<DynamicSchemaLookupAttribute>(true);
+            return attribute.GetSwaggerExtensions();
+        }
+
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetPropertiesLookupProperties(MemberInfo memberInfo)
+        {
+            var attribute = memberInfo.GetCustomAttribute<DynamicPropertiesLookupAttribute>(true);
+            return attribute.GetSwaggerExtensions();
+        }
+
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetCallbackUrlProperties(MemberInfo memberInfo)
+        {
+            var attribute = memberInfo.GetCustomAttribute<CallbackUrlAttribute>(true);
             return attribute.GetSwaggerExtensions();
         }
     }

@@ -24,14 +24,21 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
                 return;
             }
 
-            schema.Extensions.AddRange(GetClassExtensions(context));
+            schema.Extensions.AddRange(GetDynamicSchemaExtensions(context));
+            schema.Extensions.AddRange(GetDynamicPropertiesExtensions(context));
 
             schema.ExtendObjectProperties(context, Extensions.MemberInfoExtensions.ExtendProperty, _serializerDataContractResolver);
         }
 
-        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetClassExtensions(SchemaFilterContext context)
+        private static IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetDynamicSchemaExtensions(SchemaFilterContext context)
         {
             var attribute = context.Type.GetTypeInfo().GetCustomAttribute<DynamicSchemaLookupAttribute>();
+            return attribute.GetSwaggerExtensions();
+        }
+
+        private IEnumerable<KeyValuePair<string, IOpenApiExtension>> GetDynamicPropertiesExtensions(SchemaFilterContext context)
+        {
+            var attribute = context.Type.GetTypeInfo().GetCustomAttribute<DynamicPropertiesLookupAttribute>();
             return attribute.GetSwaggerExtensions();
         }
     }

@@ -7,7 +7,10 @@
         public const string Description = "description";
         public const string XMsDynamicValueLookup = "x-ms-dynamic-values";
         public const string XMsDynamicSchemaLookup = "x-ms-dynamic-schema";
+        public const string XMsDynamicPropertiesLookup = "x-ms-dynamic-properties";
         public const string Parameter = "parameter";
+        public const string ParameterReferenece = "parameterReference";
+        public const string Value = "value";
         public const string XMsCapabilities = "x-ms-capabilities";
         public const string FilePicker = "file-picker";
         public const string Summary = "summary";
