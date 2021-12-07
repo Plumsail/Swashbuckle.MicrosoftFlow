@@ -10,10 +10,6 @@ namespace TestApi.Models
         [Metadata("Friendly", "Description", VisibilityType.Advanced)]
         public string Name { get; }
 
-        [CallbackUrl]
-        [Metadata(visibility: VisibilityType.Internal)]
-        public string CallbackUrl { get; }
-
         public MetadataAttributeClass(string name)
         {
             Name = name;

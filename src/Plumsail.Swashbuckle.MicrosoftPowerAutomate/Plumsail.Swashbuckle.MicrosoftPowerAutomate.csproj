@@ -6,7 +6,7 @@
 		<RequireLicenseAcceptance>false</RequireLicenseAcceptance>
 		<Description>This library is to be used to automatically generate extensions for Microsofts PowerAutomate/LogicApps/PowerApps designers</Description>
 		<Authors>Benas Jacikas, Šarūnas Paškevičius, Belyanskiy Ilya, Mikhail Kislenko</Authors>
-		<Version>1.1.0</Version>
+		<Version>1.2.0</Version>
 		<IsPackable>true</IsPackable>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<LangVersion>Latest</LangVersion>
@@ -15,7 +15,12 @@
 		<RepositoryUrl>https://github.com/Plumsail/Swashbuckle.MicrosoftPowerAutomate</RepositoryUrl>
 		<PackageTags>swagger;flow;power automate;swashbuckle</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<PackageReleaseNotes>v 1.1.0
+		<PackageReleaseNotes>v 1.2.0
+  - Added DynamicListLookupAttribute to support x-ms-dynamic-list extension
+  - Now null values not writed to extensions
+  - Removed operation metadata from body parameter
+
+v 1.1.0
   - Added DynamicLookupPropertiesAttribute to support x-ms-dynamic-properties extension
   - Added CallbackUrlAttribute to support x-ms-notification-url extension</PackageReleaseNotes>
 	</PropertyGroup>

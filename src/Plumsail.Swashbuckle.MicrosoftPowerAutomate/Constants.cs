@@ -6,6 +6,7 @@
         public const string XMsSummary = "x-ms-summary";
         public const string Description = "description";
         public const string XMsDynamicValueLookup = "x-ms-dynamic-values";
+        public const string XMsDynamicListLookup = "x-ms-dynamic-list";
         public const string XMsDynamicSchemaLookup = "x-ms-dynamic-schema";
         public const string XMsDynamicPropertiesLookup = "x-ms-dynamic-properties";
         public const string Parameter = "parameter";
