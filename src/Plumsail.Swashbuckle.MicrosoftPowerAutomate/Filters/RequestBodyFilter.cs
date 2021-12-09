@@ -13,7 +13,6 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
             if (requestBody is null || context is null)
                 return;
 
-            requestBody.Extensions.AddRange(context.BodyParameterDescription?.GetOperationExtensions());
             requestBody.Extensions.ApplyMetadata(context.BodyParameterDescription?.ParameterDescriptor);
 
             var parameterInfo = context.BodyParameterDescription?.ParameterInfo();
