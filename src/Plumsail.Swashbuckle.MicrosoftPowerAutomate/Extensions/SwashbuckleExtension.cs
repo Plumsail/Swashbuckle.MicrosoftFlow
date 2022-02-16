@@ -5,6 +5,7 @@ using Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters;
 using Plumsail.Swashbuckle.MicrosoftPowerAutomate.VendorExtensionEntities;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
@@ -18,7 +19,10 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
         /// Enables microsoft extension generation
         /// </summary>
         /// <param name="filePicker">File picker capability used for microsoft extension generation</param>
-        public static void GenerateMicrosoftExtensions(this SwaggerGenOptions options, FilePickerCapabilityModel filePicker = null)
+        /// <param name="connectorMetadata">Connector metadata used for generate x-ms-connector-metadata extension</param>
+        public static void GenerateMicrosoftExtensions(this SwaggerGenOptions options,
+            FilePickerCapabilityModel filePicker = null,
+            ConnectorMetadataModel connectorMetadata = null)
         {
             options.OperationFilter<OperationFilter>();
             options.SchemaFilter<SchemaFilter>();
@@ -27,6 +31,9 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Extensions
 
             if (filePicker != null)
                 options.DocumentFilter<CapabilityFilter>(filePicker);
+
+            if (connectorMetadata != null)
+                options.DocumentFilter<ConnectorMetadataFilter>(connectorMetadata);
         }
 
         /// <summary>

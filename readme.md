@@ -22,7 +22,9 @@ services.AddSwaggerGen(c =>
 });
 ```
 
-It has optional argument `FilePickerCapabilityModel filePicker` for activate [File picker capability](#file-picker-capability)
+It has optionals arguments:
+* `FilePickerCapabilityModel filePicker` for activate [File picker capability](#file-picker-capability)
+* `ConnectorMetadataModel connectorMetadata` for add `x-ms-connector-metadata` extension
 
 ## Metadata
 Metadata attribute can be used for methods, parameters and properties
@@ -335,4 +337,42 @@ Swagger:
         }
     }
 }
+```
+
+## Connector metadata
+Connector metadata can be used in GenerateMicrosoftExtensions method
+### Examples
+Code:
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc();
+    
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+        c.GenerateMicrosoftExtensions(connectorMetadata: new ConnectorMetadataModel(
+            "http://www.example.com", // Link to your site
+            "http://www.example.com/privacy", // Link to your privacy policy
+            new [] { "Category1", "Category2" } // Categories for connector
+        ));
+    });
+}
+```
+Swagger:
+```json
+"x-ms-connector-metadata": [
+    {
+      "propertyName": "Website",
+      "propertyValue": "http://www.example.com"
+    },
+    {
+      "propertyName": "Privacy policy",
+      "propertyValue": "http://www.example.com/privacy"
+    },
+    {
+      "propertyName": "Categories",
+      "propertyValue": "Category1;Category2"
+    }
+]
 ```
