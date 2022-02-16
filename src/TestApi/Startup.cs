@@ -19,7 +19,8 @@ namespace TestApi
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });
-                c.GenerateMicrosoftExtensions(FilePicker);
+                c.GenerateMicrosoftExtensions(FilePicker,
+                     new ConnectorMetadataModel("http://www.example.com", "http://www.example.com/privacy", new [] { "Example", "Example2" }));
             });
             //services.AddSwaggerGenNewtonsoftSupport();
         }
