@@ -46,5 +46,9 @@
         public const string XMsNotificationContent = "x-ms-notification-content";
 
         public const string XMsTrigger = "x-ms-trigger";
+
+        public const string XMsConnectorMetadata = "x-ms-connector-metadata";
+        public const string PropertyName = "propertyName";
+        public const string PropertyValue = "propertyValue";
     }
 }

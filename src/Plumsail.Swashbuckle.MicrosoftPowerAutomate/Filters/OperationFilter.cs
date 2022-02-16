@@ -52,7 +52,7 @@ namespace Plumsail.Swashbuckle.MicrosoftPowerAutomate.Filters
                 Description = responseDescription,
                 Content = new Dictionary<string, OpenApiMediaType>
                 {
-                    [attribute.ContentType] = new OpenApiMediaType
+                    [attribute.ContentType] = new()
                     {
                         Schema = responseSchema
                     }
